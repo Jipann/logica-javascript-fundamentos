@@ -13,3 +13,4 @@ let hora = 3
 hora = hora * 60
 
 console.log('em minutos:', hora)
+// teste
