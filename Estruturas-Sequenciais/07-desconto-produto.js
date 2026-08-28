@@ -1,13 +1,22 @@
 /**
- * Receba o preço original de um produto e uma porcentagem de desconto (ex: 15%); 
- * calcule o valor do desconto e o preço final a pagar.
+ * Peça ao usuário:
+
+preço do produto;
+percentual de desconto.
+
+Calcule:
+
+quanto será o desconto;
+preço final.
  */
 
-const precoDoProduto = 120.90
-const porcentagemDeDesconto = 15
+const prompt = require('prompt-sync')()
 
-const valordoDesconto = (precoDoProduto * porcentagemDeDesconto) / 100
-const precoFinal = precoDoProduto - valordoDesconto
+let precoDoProduto = Number(prompt(' Informe o valor do produto: '))
+let  porcentagemDeDesconto = Number(prompt('Informe a porcentagem de desconto: '))
+
+let valordoDesconto = (precoDoProduto * porcentagemDeDesconto) / 100
+let precoFinal = precoDoProduto - valordoDesconto
 
 console.log(`Valor do desconto: R$ ${valordoDesconto.toFixed(2)}`)
-console.log(`Preço final a pagar: R$ ${precoFinal.toFixed(2)}`)
+console.log(`Preço final a pagar: ${precoFinal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
