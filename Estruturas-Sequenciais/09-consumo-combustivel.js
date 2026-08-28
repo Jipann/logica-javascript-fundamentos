@@ -3,10 +3,11 @@
  *  a distância total percorrida (km) e o combustível gasto (litros).
  */
 
+const prompt = require('prompt-sync')()
 
-const distanciaTotal = 120
-const consumoCombustivel = 7.8
+let distanciaTotal = Number(prompt('Distância percorrida em km: '))
+let consumoCombustivel = Number(prompt('quantidade de combustível consumida em litros: '))
 
-const consumoMedio = distanciaTotal / consumoCombustivel
+let consumoMedio = distanciaTotal / consumoCombustivel
 
 console.log(`Autonomia do veículo foi de ${consumoMedio.toFixed(2)} km/L`)
