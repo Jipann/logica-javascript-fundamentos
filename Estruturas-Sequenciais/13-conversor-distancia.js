@@ -5,11 +5,13 @@ Quilômetros → metros.
 Metros → centímetros.
  */
 
-let quilometos = 500
+const prompt = require('prompt-sync')()
 
-const metros = quilometos * 1000
+let quilometros = Number(prompt('Informe uma distância em quilômetros: '))
 
-const centimetros = metros * 100
+let metros = quilometros * 1000
 
-console.log(metros)
-console.log(centimetros)
+let centimetros = metros * 100
+
+console.log(`${quilometros} km = ${metros} metros`)
+console.log(`${quilometros} km = ${centimetros} centímetros`)
