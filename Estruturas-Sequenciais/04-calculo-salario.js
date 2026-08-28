@@ -6,10 +6,12 @@ Objetivo: saber o salário mensal do funcionario
  * 
  */
 
-const horasTrabalhadas = 220
-const valorHoraTrabalhada = 50
+const prompt = require('prompt-sync')()
 
-const salarioMensal = horasTrabalhadas * valorHoraTrabalhada
+let  horasTrabalhadas = Number(prompt('Informe a quantidade de horas trabalhadas no mês:'))
+let valorHoraTrabalhada = Number(prompt('Informe o valor da hora: '))
+
+let salarioMensal = horasTrabalhadas * valorHoraTrabalhada
 
 //// Dica de formatação monetária nativa:
 // 'pt-BR' = idioma/país | style: 'currency' = formato moeda | currency: 'BRL' = Real (R$)
