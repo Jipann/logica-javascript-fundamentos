@@ -5,11 +5,20 @@ let altura = Number(prompt(' informe sua altura.'))
 
 let imc = peso / Math.pow(altura, 2)
 
-if ((imc >= 18.5 && imc < 25)) {
-    console.log('Parabéns, você está no seu peso ideal.')
+if (imc < 18.5) {
+    console.log('Magreza (abaixo do peso)',imc.toFixed(2))
+
+}else if(imc < 25){
+
+    console.log('Peso normal (adequado)', imc.toFixed(2))
+
+}else if(imc < 30){
+    console.log('Sobrepeso (excesso de peso)', imc.toFixed(2))
+
+}else if(imc < 40){
+
+    console.log(' Obesidade (graus I e II)',imc.toFixed(2))
 
 }else{
-    console.log('Você não está na faixa de peso ideal')
+    console.log('Obesidade grave (grau III)')
 }
-
-console.log(imc.toFixed(2))
