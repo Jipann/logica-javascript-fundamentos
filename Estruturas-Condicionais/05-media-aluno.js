@@ -13,5 +13,5 @@ if (media < 5) {
     console.log('Aluno em recuperação!')
 
 }else{
-    console.log('Aluno Aprovado! ')
+    console.log('Aluno Aprovado! ', media)
 }
