@@ -1,6 +1,10 @@
 /**
  * A 1000 - 900
  * B 890 - 800
+ * C 790 - 700
+ * D 690 - 600
+ * E 590 - 500
+ * F abaixo de 500
  */
 const prompt = require('prompt-sync')()
 
