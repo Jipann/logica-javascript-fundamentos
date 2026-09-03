@@ -41,7 +41,7 @@ if (hora <= 1) {
 }
 
 
-let peso = Number(prompt('Informe seu peso: '))
+/*let peso = Number(prompt('Informe seu peso: '))
 let altura = Number(prompt('Informe sua altura: '))
 let imc = peso / Math.pow(altura, 2)
 
@@ -59,4 +59,4 @@ if (imc < 18.5) {
 
 }else{
     console.log('Obesidade grave')
-}
+}*/
