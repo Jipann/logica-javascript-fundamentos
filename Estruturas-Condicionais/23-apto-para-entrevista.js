@@ -42,7 +42,7 @@ Pode participar da entrevista
 
 const prompt = require('prompt-sync')()
 
-let idade = Number(prompt('Digite sua idaade:'))
+let idade = Number(prompt('Digite sua idade:'))
 let experiencia = String(prompt('Possui experiência? (sim/não): '))
 let curso = String(prompt('Está fazendo curso profissionalizante? (sim/não):'))
 
