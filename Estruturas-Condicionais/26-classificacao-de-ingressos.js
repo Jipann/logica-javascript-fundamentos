@@ -42,16 +42,31 @@ console.log('[2] INGRESSO MEIA: ')
 console.log('[3] INGRESSO GRATUITO: ')
 let opcao = Number(prompt('INFORME A OPÇÃO DESEJADA: '))
 
-let tipoEntrada = String(prompt('Possui direito à meia? (sim/nao): '))
+switch (opcao) {
+    case 1:
+        console.log('Ingresso Inteira ')
+        break;
 
-if (opcao > 3) {
-    console.log('Opção inválida! ')
+        case 2:
+        let tipoEntrada = prompt('Possui direito à meia? (sim/nao): ')
+        if (tipoEntrada === 'sim') {
+            console.log(`OPÇÃO: ${opcao}`)
+            console.log(`DIREITO À MEIA: ${tipoEntrada}`)
+            console.log('Ingresso meia')
+        }else{
+            console.log(`OPÇÃO: ${opcao}`)
+            console.log(`DIREITO À MEIA: ${tipoEntrada}`)
+            console.log('Não possui direito à meia entrada.')
+        }
+        
+        break;
 
-}else if ((opcao === 2) && (tipoEntrada ==='sim')) {
-   console.log(`Direito à meia: ${tipoEntrada}`) 
-    console.log('Ingresso meia')
+        case 3:
+            console.log('Ingresso gratuito. ')
+        break;
 
-}else{
-    console.log(`Direito à meia: ${tipoEntrada}`)
-    console.log('Não possui direito à meia-entrada.')
+    default:
+        console.log('opção inválida')
+       
+        break;
 }
