@@ -35,25 +35,23 @@ Você não precisa obrigatoriamente usar todas as informações para todos os ti
 
 const prompt = require('prompt-sync')()
 
-let pessoa = String(prompt(' Funcionário / morador / visitante: '))
-let cracha = String(prompt('Possui crachá? sim/não: '))
-let horario = String(prompt('Está no horário permitido? sim/não: '))
-let chave = String(prompt('Possui chave? sim/não: '))
-let autorizacao = String(prompt('Possui autorização? sim/não: '))
-let acompanhado = String(prompt('Está acompanhado do morador? sim/não: '))
+const pessoa = prompt('Funcionário / morador / visitante: ')
+const cracha = prompt('Possui crachá? (sim/não): ')
+const horario = prompt('Está no horário permitido? (sim/não): ')
+const chave = prompt('Possui chave? (sim/não): ')
+const autorizacao = prompt('Possui autorização? (sim/não): ')
+const acompanhado = prompt('Está acompanhado do morador? (sim/não): ')
 
+if(pessoa === 'funcionario' && cracha === 'sim' && horario === 'sim') {
 
-if (pessoa === 'funcionario' && horario === 'sim') {
+    console.log('Acesso liberado!')
 
-    console.log('Acesso Liberado! ')
+}else if (pessoa === 'morador' && (chave === 'sim' || autorizacao === 'sim')) {
+    console.log('Acesso liberado!')
 
-}else if ((pessoa === 'morador') && (chave === 'sim') || (autorizacao === 'sim')) {
-     console.log('Acesso Liberado! ')
+} else if (pessoa === 'visitante' && autorizacao === 'sim' && acompanhado === 'sim') {
+    console.log('Acesso liberado!')
 
-}else if (pessoa === 'visitante' && acompanhado === 'sim') {
-    console.log('Acesso Liberado! ')
-    
-}else{
-
-    console.log('Acesso negado! ')
+} else{
+    console.log('Acesso negado!')
 }
