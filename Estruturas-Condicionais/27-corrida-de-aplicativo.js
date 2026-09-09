@@ -30,21 +30,14 @@ let distancia = Number(prompt('Distância da corrida: '))
 let disponivel = String(prompt('Motorista está disponível? (sim/não): '))
 let categoria = String(prompt('Motorista possui categoria especial? (sim/não): '))
 
-if (distancia <= 20  && disponivel === 'sim') {
+if ((distancia <= 20  && disponivel === 'sim') || (distancia > 20 && categoria === 'sim')) {
     console.log(`Distância: ${distancia} km `) 
     console.log(`Disponível: ${disponivel} `)
     console.log(`Especial: ${categoria}`)
     console.log('Corrida aceita.')
-
-}else if (distancia >= 30 && categoria === 'nao') {
-    console.log(`Distância: ${distancia} km `) 
-    console.log(`Disponível: ${disponivel} `)
-    console.log(`Especial: ${categoria}`)
-    console.log('Corrida não aceita.')
-
 }else{
     console.log(`Distância: ${distancia} km `) 
     console.log(`Disponível: ${disponivel} `)
     console.log(`Especial: ${categoria}`)
-    console.log('Corrida aceita.')
+    console.log('Corrida não aceita.')
 }
