@@ -31,30 +31,27 @@ const prompt =require('prompt-sync')()
 
 let numero = Number(prompt('Informe um numero inteiro: '))
 
-if (numero > 0) {
-    console.log('Positivo! ')
-    if (numero % 2 === 0) {
-        console.log('Par')
-    }else{
-        console.log('Ímpar')
+    if (numero > 0) {
+
+    console.log('Positivo')
+
+    } else if (numero < 0) {
+
+    console.log('Negativo')
+
+    } else {
+
+    console.log('Zero')
     }
 
-}else if (numero < 0 && numero % 2 !== 0) {
-    console.log('Negativo!')
-    console.log('Ímpar')
+// Depois descobrimos se é par ou ímpar
+if (numero % 2 === 0) {
 
-}else{
-    console.log('Zero')
+    console.log('Par')
+
+} else {
+
+    console.log('Ímpar')
 }
 
-// não consegui pensar em uma solução para mostrar o numero 
-// quando ele for exemplo -7 mostrar que ele é um numero impar
-
-/**
- * tentei divir o programa da seguinte forma primeiro eu 
- * encontrei se o numero era positivo negativo ou zero 
- * 
- * PERGUNTAR PARA CHAT COMO TRATAR O CASO EXEMPLO -8 E NEGATIVO 
- * SO QUE E UM NUMERO PAR
- */
 
