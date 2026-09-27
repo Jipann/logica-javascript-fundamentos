@@ -106,7 +106,6 @@ switch (pagamento) {
     case 3:
         if (compra > 300) {
             desconto = 5/100
-            desconto = 5/100
             percentual = desconto * 100
             desconto = compra * (desconto)
             novoValor = compra - desconto
