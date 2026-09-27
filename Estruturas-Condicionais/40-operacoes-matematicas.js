@@ -70,4 +70,5 @@ switch (opcao) {
     default:
         console.log('Operação inválida')
         break;
+        
 }
