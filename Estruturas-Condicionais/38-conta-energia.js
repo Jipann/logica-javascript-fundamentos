@@ -34,21 +34,22 @@ e na organização dos else if.
 const prompt = require('prompt-sync')()
 
 let consumo = Number(prompt('Informe o consumo de energia: '))
+let valorConta = 0
 
 if (consumo <= 100) {
     console.log(`Consumo: ${consumo}`)
-    consumo = consumo * 0.8
-    console.log(`Valor: ${consumo.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+    valorConta = consumo * 0.8
+    console.log(`Valor: ${valorConta.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
 
 }else if (consumo > 100 && consumo <= 200) {
     console.log(`Consumo: ${consumo}`)
-    consumo = consumo * 1
-    console.log(`Valor: ${consumo.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+    valorConta = consumo * 1
+    console.log(`Valor: ${valorConta.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
 
 }else{
     console.log(`Consumo: ${consumo}`)
-    consumo = consumo * 1.3
-    console.log(`Valor: ${consumo.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+    valorConta = consumo * 1.3
+    console.log(`Valor: ${valorConta.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
 }
 
 

@@ -43,7 +43,7 @@ Aqui eu quero que você use switch + if.
 const prompt = require('prompt-sync')()
 
 let numero1 = Number(prompt("informe o primeiro número: "))
-let numero2 = Number(prompt("informe o primeiro número: "))
+let numero2 = Number(prompt("informe o segundo número: "))
 console.log('[1] Somar\n[2] Subtrair\n[3] Multiplicar\n[4] Dividir')
 let opcao = Number(prompt('Escolha uma opção: '))
 
@@ -59,7 +59,7 @@ switch (opcao) {
         break;
 
     case 4:
-        if (numero1 === 0 || numero2 === 0) {
+        if (numero2 === 0) {
             console.log('Não é possivel dividir por zero')
         }else{
              console.log('Divisão =', numero1 / numero2)
