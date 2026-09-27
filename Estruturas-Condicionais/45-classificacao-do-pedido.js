@@ -114,39 +114,24 @@ Regra C:
 
 const prompt = require('prompt-sync')()
 
-let valorPedido = Number(prompt('Valor do pedido: '))
-let itens = Number(prompt('Quantidade de itens: '))
-let clube = prompt('Cliente é VIP (sim/nao) ? ')
-let regiao = prompt('Região: ')
+const valorPedido = Number(prompt('Valor do pedido: '))
+const itens = Number(prompt('Quantidade de itens: '))
+const clube = prompt('Cliente é VIP? (sim/nao): ')
+const regiao = prompt('Região: ')
 
 if (valorPedido < 100) {
-    console.log(`Valor: ${valorPedido}`)
-    console.log(`Itens: ${itens}`)
-    console.log(`Vip: ${clube}`)
-    console.log(`Região: ${regiao}`)
+
     console.log('→ Não tem frete grátis')
 
-}else if ((valorPedido <= 300 && valorPedido >= 500 && regiao ==='centro')|| (regiao === ' bairro' && clube === 'sim')){
+} else if (
+    (valorPedido >= 300 && regiao === 'centro') ||
+    (valorPedido >= 500 && regiao === 'bairro' && clube === 'sim') ||
+    (itens >= 10 && clube === 'sim' && (regiao === 'centro' || regiao === 'bairro'))
+) {
 
-    console.log(`Valor: ${valorPedido}`)
-    console.log(`Itens: ${itens}`)
-    console.log(`Vip: ${clube}`)
-    console.log(`Região: ${regiao}`)
     console.log('→ Frete grátis')
 
-}else if((itens >= 10 && clube === 'sim' && regiao === 'centro') || regiao === 'bairro'){
+} else {
 
-    console.log(`Valor: ${valorPedido}`)
-    console.log(`Itens: ${itens}`)
-    console.log(`Vip: ${clube}`)
-    console.log(`Região: ${regiao}`)
-    console.log('→ Frete grátis')
-
-}else{
-    console.log(`Valor: ${valorPedido}`)
-    console.log(`Itens: ${itens}`)
-    console.log(`Vip: ${clube}`)
-    console.log(`Região: ${regiao}`)
     console.log('→ Não tem frete grátis')
-    
 }
