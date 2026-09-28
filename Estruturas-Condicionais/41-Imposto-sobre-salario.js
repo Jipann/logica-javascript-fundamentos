@@ -35,7 +35,7 @@ const prompt = require('prompt-sync')()
 
 
 let salario = Number(prompt('Informe o salário: '))
-let fgts = 0
+let taxa = 0
 let desconto = 0
 // ESSA FORMULA DA O VALOR QUE IRA SER DESCONTADO DO SALÁRIO:
 let imposto = 0 //salario * (15/100)
@@ -43,9 +43,9 @@ let imposto = 0 //salario * (15/100)
 let Novosalario = 0 //salario - imposto
 
 if (salario <= 2500) {
-    fgts = 0/100
+    taxa = 0/100
     imposto = salario * (fgts)
-    desconto = fgts * 100
+    desconto = taxa * 100
     Novosalario = salario - imposto
     console.log(`Salário: ${salario}`)
     console.log(`Taxa ${desconto}%`)
@@ -53,9 +53,9 @@ if (salario <= 2500) {
     console.log(`Salário líquido: ${Novosalario.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
 
 }else if (salario > 2500 && salario <= 4000) {
-    fgts = 10/100
+    taxa = 10/100
     imposto = salario * (fgts)
-    desconto = fgts * 100
+    desconto = taxa * 100
     Novosalario = salario - imposto
     console.log(`Salário: ${salario}`)
     console.log(`Taxa ${desconto}%`)
@@ -63,9 +63,9 @@ if (salario <= 2500) {
     console.log(`Salário líquido: ${Novosalario.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
 
 }else if (salario > 4000 && salario <=6000) {
-    fgts = 15/100
+    taxa = 15/100
     imposto = salario * (fgts)
-    desconto = fgts * 100
+    desconto = taxa * 100
     Novosalario = salario - imposto
     console.log(`Salário: ${salario}`)
     console.log(`Taxa ${desconto}%`)
@@ -74,9 +74,9 @@ if (salario <= 2500) {
 
 }else{
 
-    fgts = 20/100
+    taxa = 20/100
     imposto = salario * (fgts)
-    desconto = fgts * 100
+    desconto = taxa * 100
     Novosalario = salario - imposto
     console.log(`Salário: ${salario}`)
     console.log(`Taxa ${desconto}%`)
