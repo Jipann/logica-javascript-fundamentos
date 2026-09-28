@@ -44,7 +44,7 @@ let Novosalario = 0 //salario - imposto
 
 if (salario <= 2500) {
     taxa = 0/100
-    imposto = salario * (fgts)
+    imposto = salario * (taxa)
     desconto = taxa * 100
     Novosalario = salario - imposto
     console.log(`Salário: ${salario}`)
@@ -54,7 +54,7 @@ if (salario <= 2500) {
 
 }else if (salario > 2500 && salario <= 4000) {
     taxa = 10/100
-    imposto = salario * (fgts)
+    imposto = salario * (taxa)
     desconto = taxa * 100
     Novosalario = salario - imposto
     console.log(`Salário: ${salario}`)
@@ -64,7 +64,7 @@ if (salario <= 2500) {
 
 }else if (salario > 4000 && salario <=6000) {
     taxa = 15/100
-    imposto = salario * (fgts)
+    imposto = salario * (taxa)
     desconto = taxa * 100
     Novosalario = salario - imposto
     console.log(`Salário: ${salario}`)
@@ -75,7 +75,7 @@ if (salario <= 2500) {
 }else{
 
     taxa = 20/100
-    imposto = salario * (fgts)
+    imposto = salario * (taxa)
     desconto = taxa * 100
     Novosalario = salario - imposto
     console.log(`Salário: ${salario}`)
