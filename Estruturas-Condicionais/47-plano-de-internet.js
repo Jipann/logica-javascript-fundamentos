@@ -74,7 +74,7 @@ let dispositivos = Number(prompt('Qauntidade de dispositivos: '))
 
 switch (plano) {
     case 1:
-        if (dispositivos <= 2) {// - ao 2
+        if (dispositivos <= 2) {// -100  ao 2
             console.log(`Plano:${plano}`)
             console.log(`Dispositivos:${dispositivos}\n`)
             console.log('Plano Aprovado')
