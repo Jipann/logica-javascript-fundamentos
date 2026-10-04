@@ -50,87 +50,61 @@ Regra geral
 Se o valor for menor que R$50, a compra deve ser recusada independentemente da forma de pagamento.
  */
 
-
 const prompt = require('prompt-sync')()
 
-let valorCompra = Number(prompt('Valor da compra: '))
-console.log('[1]PIX\n[2]CARTAO\n[3]BOLETO')
-let opPagamento = Number(prompt('Escolha a a forma de pagamento: '))
-let clienteVip = prompt('Cliente VIP (sim/nao)? ')
-let cadastro = prompt('Possui cadastro ativo(sim/nao)? ')
+const valorCompra = Number(prompt('Valor da compra: '))
+
+console.log('[1] PIX')
+console.log('[2] CARTÃO')
+console.log('[3] BOLETO')
+
+const opPagamento = Number(prompt('Escolha a forma de pagamento: '))
+const clienteVip = prompt('Cliente VIP? (sim/nao): ')
+const cadastro = prompt('Possui cadastro ativo? (sim/nao): ')
 
 if (valorCompra < 50) {
+
     console.log('Compra recusada!')
 
-}else{
+} else {
 
     switch (opPagamento) {
-    case 1:
-        if (cadastro === 'sim' && valorCompra >= 100) {
-            console.log(`Compra:${valorCompra}`)
-            console.log('Pagamento: PIX')
-            console.log(`VIP:${clienteVip}`)
-            console.log(`Cadastro:${cadastro}`)
-            console.log('Compra aprovada.')
 
-        }else{
-            console.log(`Compra:${valorCompra}`)
-            console.log('Pagamento: PIX')
-            console.log(`VIP:${clienteVip}`)
-            console.log(`Cadastro:${cadastro}`)
-            console.log('Compra não aprovada.')
-        }
+        case 1:
 
-        break;
-    case 2:
-        if (cadastro === 'sim' && valorCompra >= 100){
-            console.log(`Compra:${valorCompra}`)
-            console.log('Pagamento: Cartão')
-            console.log(`VIP:${clienteVip}`)
-            console.log(`Cadastro:${cadastro}`)
-            console.log('Compra aprovada.')
+            if (cadastro === 'sim' && valorCompra >= 100) {
+                console.log('Compra aprovada.')
+            } else {
+                console.log('Compra não aprovada.')
+            }
 
-        }else if (valorCompra >= 100 && clienteVip === 'sim'){
-            
-            console.log(`Compra:${valorCompra}`)
-            console.log('Pagamento: Cartão')
-            console.log(`VIP:${clienteVip}`)
-            console.log(`Cadastro:${cadastro}`)
-            console.log('Compra aprovada.')
+            break
 
-        }else{
-            console.log(`Compra:${valorCompra}`)
-            console.log('Pagamento: Cartão')
-            console.log(`VIP:${clienteVip}`)
-            console.log(`Cadastro:${cadastro}`)
-            console.log('Compra não aprovada.')
-        }
-        
-        
+        case 2:
 
-    case 3:
-        if ((clienteVip === 'nao' && valorCompra >= 300) && (cadastro === 'sim')) {
-            console.log(`Compra:${valorCompra}`)
-            console.log('Pagamento: Boleto')
-            console.log(`VIP:${clienteVip}`)
-            console.log(`Cadastro:${cadastro}`)
-            console.log('Compra aprovada.')
+            if (
+                (cadastro === 'sim' && valorCompra >= 200) ||
+                (clienteVip === 'sim' && valorCompra >= 100)
+            ) {
+                console.log('Compra aprovada.')
+            } else {
+                console.log('Compra não aprovada.')
+            }
 
-        }else{
-            console.log(`Compra:${valorCompra}`)
-            console.log('Pagamento: Boleto')
-            console.log(`VIP:${clienteVip}`)
-            console.log(`Cadastro:${cadastro}`)
-            console.log('Compra não aprovada.')
-        }
+            break
 
-        break
+        case 3:
 
-    default:
-        console.log('Opção inválida!')
-        break;
+            if (cadastro === 'sim' && valorCompra >= 300 && clienteVip === 'nao') {
+                console.log('Compra aprovada.')
+            } else {
+                console.log('Compra não aprovada.')
+            }
+
+            break
+
+        default:
+
+            console.log('Opção inválida!')
+    }
 }
-
-
-}
-
